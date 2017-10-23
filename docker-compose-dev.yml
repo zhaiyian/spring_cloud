@@ -1,0 +1,11 @@
+version: '3'
+services:
+  eureka-server:
+    build: ./eurekaserver/src/main/docker # 用来指定一个包含Dockerfile文件的路径
+    ports:
+      - 8761:8761
+
+  service-hi:
+    build: ./eurekaclient/src/main/docker
+    ports:
+      - 8762:8762

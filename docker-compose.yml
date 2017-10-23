@@ -1,0 +1,14 @@
+version: '3'
+services:
+  eureka-server:
+    image: eureka-server
+    restart: always
+    ports:
+      - 8761:8761
+  service-hi:
+    image: service-hi
+    restart: always
+    links:
+      - eureka-server
+    ports:
+      - 8762:8762
