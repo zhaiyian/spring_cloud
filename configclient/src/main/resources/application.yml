@@ -1,0 +1,13 @@
+server:
+  port: ${{SERVER_PORT}:8881}
+#rabbitmq config
+spring:
+  rabbitmq:
+    host: config-server
+    port: 5672
+    username: zya
+    password: 123456
+#不需要验证
+management:
+  security:
+    enabled: false
